@@ -1,0 +1,22 @@
+{{ template "header.html" }}
+<center>
+    <table class="table table-dark table-hover">
+        <thead>
+            <th>Nome</th>
+            <th>Ano</th>
+            <th>Nota</th>
+        </thead>
+
+        <tbody>
+            {{range .}}
+            <tr>
+                <td>{{.Nome | ToUpper }}</td>
+                <td>{{.Ano}}</td>
+                <td>{{.Nota}}</td>
+            </tr>
+            {{end}}
+        </tbody>
+    </table>
+</center>
+
+{{ template "footer.html" }}
